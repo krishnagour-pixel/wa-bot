@@ -6,8 +6,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-RUN npm ci
-COPY . .
+RUN npm install
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
